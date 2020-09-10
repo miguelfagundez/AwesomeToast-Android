@@ -31,28 +31,28 @@ public class MainActivity extends AppCompatActivity {
         AwesomeToast.defaultBlackPeak(getApplicationContext(), "This is a Default Toast (Black)");
 
         // Success
-        AwesomeToast.success(getApplicationContext(), "This is Success");
-        AwesomeToast.successPeak(getApplicationContext(),"This is Success Peak");
-        AwesomeToast.successGradient(getApplicationContext(),"This is Success Gradient");
-        AwesomeToast.successGradientPeak(getApplicationContext(),"This is Success Gradient Peak");
+        AwesomeToast.success(getApplicationContext(), "This is a Success Message");
+        AwesomeToast.successPeak(getApplicationContext(),"This is a Success Message (Peak)");
+        AwesomeToast.successGradient(getApplicationContext(),"This is a Success Message (Gradient)");
+        AwesomeToast.successGradientPeak(getApplicationContext(),"This is a Success Message (Both)");
 
         // Error
-        AwesomeToast.error(getApplicationContext(), "This is Error");
-        AwesomeToast.errorPeak(getApplicationContext(), "This is Error Peak");
-        AwesomeToast.errorGradient(getApplicationContext(),"This is Error Gradient");
-        AwesomeToast.errorGradientPeak(getApplicationContext(),"This is Error Gradient Peak");
+        AwesomeToast.error(getApplicationContext(), "This is an Error Message");
+        AwesomeToast.errorPeak(getApplicationContext(), "This is an Error Message (Peak)");
+        AwesomeToast.errorGradient(getApplicationContext(),"This is an Error Message (Gradient)");
+        AwesomeToast.errorGradientPeak(getApplicationContext(),"This is an Error Message (Both)");
 
         // Info
-        AwesomeToast.info(getApplicationContext(), "This is Info");
-        AwesomeToast.infoPeak(getApplicationContext(), "This is Info Peak");
-        AwesomeToast.infoGradient(getApplicationContext(),"This is Info Gradient");
-        AwesomeToast.infoGradientPeak(getApplicationContext(), "This is Info Gradient Peak");
+        AwesomeToast.info(getApplicationContext(), "This is an Info Message");
+        AwesomeToast.infoPeak(getApplicationContext(), "This is an Info Message (Peak)");
+        AwesomeToast.infoGradient(getApplicationContext(),"This is an Info Message (Gradient)");
+        AwesomeToast.infoGradientPeak(getApplicationContext(), "This is an Info Message (Both)");
 
         // Warning
-        AwesomeToast.warning(getApplicationContext(), "This is Warning");
-        AwesomeToast.warningPeak(getApplicationContext(), "This is Warning Peak");
-        AwesomeToast.warningGradient(getApplicationContext(),"This is Warning Gradient");
-        AwesomeToast.warningGradientPeak(getApplicationContext(), "This is Warning Gradient Peak");
+        AwesomeToast.warning(getApplicationContext(), "This is a Warning Message");
+        AwesomeToast.warningPeak(getApplicationContext(), "This is a Warning Message (Peak)");
+        AwesomeToast.warningGradient(getApplicationContext(),"This is a Warning Message (Gradient)");
+        AwesomeToast.warningGradientPeak(getApplicationContext(), "This is a Warning Message (Both)");
 
         // Custom Toast
         new AwesomeToast.Create(this, "This is a Custom Toast")

@@ -156,16 +156,7 @@ public class AwesomeToast {
     }
     // Gradient
     public static void successGradient(Context context, String text){
-        /*GradientDrawable gradient = new GradientDrawable(
-                GradientDrawable.Orientation.TOP_BOTTOM,
-                new int[]{context.getResources().getColor(R.color.colorGreenDark),
-                        context.getResources().getColor(R.color.colorGreenDark),
-                        context.getResources().getColor(R.color.colorGreen),
-                        context.getResources().getColor(R.color.colorGreen)}
-        );*/
-
         new Create(context, text)
-                //.setGradientDrawable(gradient)
                 .setIsGradient(true)
                 .setGradientColorStart(context.getResources().getColor(R.color.colorGreenDark))
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorGreen))
