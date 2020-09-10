@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Success colors -->
+    <color name="colorBlack">#000000</color>
+    <color name="colorGrey">#7E7E7E</color>
+    <color name="colorWhite">#FFFFFF</color>
+
+    <!-- Success colors -->
+    <color name="colorGreen">#17BF0B</color>
+    <color name="colorGreenDark">#0F8A07</color>
+
+    <!-- Error colors -->
+    <color name="colorRed">#E80E0E</color>
+    <color name="colorRedDark">#B60D0D</color>
+
+    <!-- Info colors -->
+    <color name="colorBlue">#0E45E8</color>
+    <color name="colorBlueDark">#0C38BA</color>
+
+    <!-- Warning colors -->
+    <color name="colorOrange">#E89F0E</color>
+    <color name="colorOrangeDark">#BC810C</color>
+</resources>
