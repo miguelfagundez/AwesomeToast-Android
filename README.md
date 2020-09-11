@@ -8,8 +8,8 @@ Simple library for managing awesome custom toast in Android SDK
 
 ## Abstract
     Awesome Toast is a simple and easy to use Toast library for Android. 
-    The library provides some common toast message (Default, Success, Error, Warning, and Information), but also you can 
-    create your own Toast message using the methods describe below. 
+    The library provides some common toast message (Default, Success, Error, Warning, and Information), 
+    but also you can create your own Toast message using the methods describe below. 
     You can use it to enhance the user experience and save developing time. Cheers!
 
 Setup
@@ -84,6 +84,29 @@ Default Black: `AwesomeToast.defaultBlack(this, " This is an Info Message ");`
 
 Default Black Peak: `AwesomeToast.defaultBlackPeak(this, " This is an Info Message ");`
 
+
+Attributes
+-----
+
+|Attribute name|Type|Default value|Description|
+|---|---|:---:|---|
+|text|String|N/A|text shows in Toast|
+|textColor|int|White|Text color|
+|textSize|int|TEXT_NORMAL_SIZE = 16sp| Text Size|
+|textBold|boolean|false|Text bold available|
+|imageValue|int|0|Image in Toast (optional)|
+|backgroundColor|int|Grey|Background color in Toast (plain option only)|
+|borderColor|int|Black|Border color in Toast (plain or gradient option)|
+|borderWidth|int|8|Border size in Toast|
+|toastGravity|int|Gravity.BOTTOM|Toast position in Screen (TOP and CENTER available)|
+|toastLength|int|Toast.LENGTH_SHORT|Toast duration (LENGHT_LONG available)|
+|isGradient|boolean|false|Background color in gradient mode|
+|gradientColorStart|int|Black|Start gradient color (Top) / isGradiente MUST be TRUE|
+|gradientColorEnd|int|Grey|End gradient color (Bottom) / isGradiente MUST be TRUE|
+|radiusTopLeft|int|0|Top left corner|
+|radiusBottomLeft|int|0|Bottom left corner|
+|radiusTopRight|int|0|Top right corner|
+|radiusBottomRight|int|0|Bottom right corner|
 
 Author
 -----
