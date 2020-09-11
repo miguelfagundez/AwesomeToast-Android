@@ -52,8 +52,8 @@ new AwesomeToast.Create(this, " Awesome Toast! ") // Create a new AwesomeToast, 
         .setTextBold(true)			  // Bold style available
         .setAllRadius(25)			  // Corner radius (recommended between 25 to 75)
         .setTextSize(Constants.TEXT_BIG_SIZE)	  // Text Size (options available SMALL, NORMAL, BIG, or DEFAULT)
-        .setToastGravity(Gravity.BOTTOM)	  // Toast Gravity (BOTTOM, CENTER, or TOP)
-        .show();				  // ALWAYS include .show method at the end.
+        .setToastGravity(Constants.TOAST_CENTER_POSITION)  // Toast Gravity (BOTTOM, CENTER, or TOP)
+        .show();				           // ALWAYS include .show method at the end.
 ```
 
 **Toast Messages Available into the Library**
@@ -245,7 +245,7 @@ Options available:
 Toast shape
 -----
 
-The library uses the RECTANGLE as shape by default. However, you can modify this shape using toast corners above or even using the `.setShape()` method as follow:
+The library uses the **RECTANGLE** as shape by default. However, you can modify this shape using toast corners above or even using the `.setShape()` method as follow:
 
 ```java
 // Custom Toast
@@ -256,7 +256,7 @@ new AwesomeToast.Create(this, " Toast all corners! ") // Create a new AwesomeToa
         .show();				// ALWAYS include .show method at the end.
 ```
 
-However, the library does not manage any other shape. If you want to change the shape, then you need to use GradientDrawable options as showed above. 
+However, the library does not manage any other shape. If you want to change the shape, then you need to use GradientDrawable option as showed above. 
 
 
 Author
