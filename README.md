@@ -256,7 +256,7 @@ new AwesomeToast.Create(this, " Toast all corners! ") // Create a new AwesomeToa
         .show();				// ALWAYS include .show method at the end.
 ```
 
-However, the library does not manage any other shape. If you want to change the shape need to use GradientDrawable options as showed above. 
+However, the library does not manage any other shape. If you want to change the shape, then you need to use GradientDrawable options as showed above. 
 
 
 Author
