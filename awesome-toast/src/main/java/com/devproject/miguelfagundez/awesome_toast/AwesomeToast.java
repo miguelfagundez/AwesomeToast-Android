@@ -20,6 +20,20 @@ import android.widget.Toast;
 //********************************************************
 public class AwesomeToast {
 
+    // Toast Duration
+    public static final int TOAST_LONG_DURATION = 1;
+    public static final int TOAST_SHORT_DURATION = 2;
+
+    // Text Size
+    public static final int TEXT_SMALL_SIZE = 3;
+    public static final int TEXT_NORMAL_SIZE = 4;
+    public static final int TEXT_BIG_SIZE = 5;
+
+    // Gravity
+    public static final int TOAST_BOTTOM_POSITION = 6;
+    public static final int TOAST_CENTER_POSITION = 7;
+    public static final int TOAST_TOP_POSITION = 8;
+
     //************************************
     //        Main library class
     //************************************
@@ -39,7 +53,6 @@ public class AwesomeToast {
         // Set some TextView values (text, color, size, style)
         textView.setText(create.text);
         textView.setTextColor(create.textColor);
-        create.textSize = 28;
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, create.textSize);
         if (create.textBold) textView.setTypeface(null, Typeface.BOLD);
         else textView.setTypeface(null, Typeface.NORMAL);
@@ -93,7 +106,7 @@ public class AwesomeToast {
     // Black background
     public static void defaultBlack(Context context, String text){
         new Create(context, "   " + text + "   ")
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setBackgroundColor(context.getResources().getColor(R.color.colorBlack))
                 .setTextColor(context.getResources().getColor(R.color.colorWhite))
                 .setAllRadius(80)
@@ -102,7 +115,7 @@ public class AwesomeToast {
 
     public static void defaultBlackPeak(Context context, String text){
         new Create(context, "   " + text + "   ")
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setBackgroundColor(context.getResources().getColor(R.color.colorBlack))
                 .setTextColor(context.getResources().getColor(R.color.colorWhite))
                 .setRadiusTopLeft(70)
@@ -112,7 +125,7 @@ public class AwesomeToast {
     // White background
     public static void defaultWhite(Context context, String text){
         new Create(context, "   " + text + "   ")
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setBackgroundColor(context.getResources().getColor(R.color.colorWhite))
                 .setTextColor(context.getResources().getColor(R.color.colorBlack))
                 .setAllRadius(80)
@@ -121,7 +134,7 @@ public class AwesomeToast {
 
     public static void defaultWhitePeak(Context context, String text){
         new Create(context, "   " + text + "   ")
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setBackgroundColor(context.getResources().getColor(R.color.colorWhite))
                 .setTextColor(context.getResources().getColor(R.color.colorBlack))
                 .setRadiusTopLeft(70)
@@ -140,7 +153,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorGreen))
                 .setBorderColor(context.getResources().getColor(R.color.colorGreenDark))
                 .setImageValue(R.drawable.ic_success)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -150,7 +163,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorGreen))
                 .setBorderColor(context.getResources().getColor(R.color.colorGreenDark))
                 .setImageValue(R.drawable.ic_success)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -163,7 +176,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorGreen))
                 .setBorderColor(context.getResources().getColor(R.color.colorGreenDark))
                 .setImageValue(R.drawable.ic_success)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -175,7 +188,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorGreen))
                 .setBorderColor(context.getResources().getColor(R.color.colorGreenDark))
                 .setImageValue(R.drawable.ic_success)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -192,7 +205,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorRed))
                 .setBorderColor(context.getResources().getColor(R.color.colorRedDark))
                 .setImageValue(R.drawable.ic_error)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -202,7 +215,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorRed))
                 .setBorderColor(context.getResources().getColor(R.color.colorRedDark))
                 .setImageValue(R.drawable.ic_error)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -215,7 +228,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorRed))
                 .setBorderColor(context.getResources().getColor(R.color.colorRedDark))
                 .setImageValue(R.drawable.ic_error)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -228,7 +241,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorRed))
                 .setBorderColor(context.getResources().getColor(R.color.colorRedDark))
                 .setImageValue(R.drawable.ic_error)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -245,7 +258,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorOrange))
                 .setBorderColor(context.getResources().getColor(R.color.colorOrangeDark))
                 .setImageValue(R.drawable.ic_warning)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -255,7 +268,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorOrange))
                 .setBorderColor(context.getResources().getColor(R.color.colorOrangeDark))
                 .setImageValue(R.drawable.ic_warning)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -268,7 +281,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorOrange))
                 .setBorderColor(context.getResources().getColor(R.color.colorOrangeDark))
                 .setImageValue(R.drawable.ic_warning)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -280,7 +293,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorOrange))
                 .setBorderColor(context.getResources().getColor(R.color.colorOrangeDark))
                 .setImageValue(R.drawable.ic_warning)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -297,7 +310,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorBlue))
                 .setBorderColor(context.getResources().getColor(R.color.colorBlueDark))
                 .setImageValue(R.drawable.ic_info)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -307,7 +320,7 @@ public class AwesomeToast {
                 .setBackgroundColor(context.getResources().getColor(R.color.colorBlue))
                 .setBorderColor(context.getResources().getColor(R.color.colorBlueDark))
                 .setImageValue(R.drawable.ic_info)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -320,7 +333,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorBlue))
                 .setBorderColor(context.getResources().getColor(R.color.colorBlueDark))
                 .setImageValue(R.drawable.ic_info)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setAllRadius(100)
                 .show();
     }
@@ -332,7 +345,7 @@ public class AwesomeToast {
                 .setGradientColorEnd(context.getResources().getColor(R.color.colorBlue))
                 .setBorderColor(context.getResources().getColor(R.color.colorBlueDark))
                 .setImageValue(R.drawable.ic_info)
-                .setTextSize(Constants.TEXT_NORMAL_SIZE)
+                .setTextSize(TEXT_NORMAL_SIZE)
                 .setRadiusTopLeft(70)
                 .setRadiusBottomRight(70)
                 .show();
@@ -374,7 +387,7 @@ public class AwesomeToast {
             this.text = text;
 
             // Text values
-            setTextSize(Constants.TEXT_NORMAL_SIZE);
+            setTextSize(TEXT_NORMAL_SIZE);
             textBold = false;
 
             // Default Colors
@@ -452,13 +465,13 @@ public class AwesomeToast {
 
         public Create setTextSize(int textSize) {
             switch (textSize){
-                case Constants.TEXT_SMALL_SIZE:
+                case TEXT_SMALL_SIZE:
                     this.textSize = 12;
                     break;
-                case Constants.TEXT_BIG_SIZE:
+                case TEXT_BIG_SIZE:
                     this.textSize = 24;
                     break;
-                case Constants.TEXT_NORMAL_SIZE:
+                case TEXT_NORMAL_SIZE:
                     this.textSize = 16;
                     break;
                 default:
@@ -479,7 +492,17 @@ public class AwesomeToast {
         }
 
         public Create setToastGravity(int toastGravity) {
-            this.toastGravity = toastGravity;
+            switch (toastGravity){
+                case TOAST_CENTER_POSITION:
+                    this.toastGravity = Gravity.CENTER;
+                    break;
+                case TOAST_TOP_POSITION:
+                    this.toastGravity = Gravity.TOP;
+                    break;
+                default:
+                    this.toastGravity = Gravity.BOTTOM;
+                    break;
+            }
             return this;
         }
 
@@ -490,7 +513,7 @@ public class AwesomeToast {
 
         public Create setToastLength(int toastLength) {
             switch (toastLength){
-                case Constants.TOAST_LONG_DURATION:
+                case TOAST_LONG_DURATION:
                     this.toastLength = Toast.LENGTH_LONG;
                     break;
                 default:

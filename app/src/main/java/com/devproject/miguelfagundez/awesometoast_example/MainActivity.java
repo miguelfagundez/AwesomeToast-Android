@@ -2,12 +2,12 @@ package com.devproject.miguelfagundez.awesometoast_example;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.drawable.GradientDrawable;
 import android.os.Bundle;
-import android.view.Gravity;
 import android.view.View;
 
 import com.devproject.miguelfagundez.awesome_toast.AwesomeToast;
-import com.devproject.miguelfagundez.awesome_toast.Constants;
+
 
 public class MainActivity extends AppCompatActivity {
 
@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
         AwesomeToast.errorGradientPeak(getApplicationContext(),"This is an Error Message (Both)");*/
 
         // Info
-        AwesomeToast.info(getApplicationContext(), "This is an Info Message");
+        /*AwesomeToast.info(getApplicationContext(), "This is an Info Message");
         AwesomeToast.infoPeak(getApplicationContext(), "This is an Info Message (Peak)");
         AwesomeToast.infoGradient(getApplicationContext(),"This is an Info Message (Gradient)");
-        AwesomeToast.infoGradientPeak(getApplicationContext(), "This is an Info Message (Both)");
+        AwesomeToast.infoGradientPeak(getApplicationContext(), "This is an Info Message (Both)");*/
 
         // Warning
         /*AwesomeToast.warning(getApplicationContext(), "This is a Warning Message");
@@ -58,10 +58,13 @@ public class MainActivity extends AppCompatActivity {
         new AwesomeToast.Create(this, " Awesome Toast! ")
                 .setImageValue(R.drawable.ic_clock_logo)
                 .setIsGradient(true)
+                .setGradientColorStart(this.getResources().getColor(R.color.yellow))
+                .setGradientColorEnd(this.getResources().getColor(R.color.colorAccent))
                 .setTextBold(true)
                 .setAllRadius(25)
-                .setTextSize(Constants.TEXT_BIG_SIZE)
-                .setToastGravity(Gravity.BOTTOM)
+                .setShape(GradientDrawable.OVAL)
+                .setTextSize(AwesomeToast.TEXT_BIG_SIZE)
+                .setToastGravity(AwesomeToast.TOAST_BOTTOM_POSITION)
                 .show();
 
     }
