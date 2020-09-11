@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
     public void showToast(View view) {
 
         // Default
-        AwesomeToast.defaultWhite(getApplicationContext(), "This is a Default Toast (White)");
+        /*AwesomeToast.defaultWhite(getApplicationContext(), "This is a Default Toast (White)");
         AwesomeToast.defaultWhitePeak(getApplicationContext(), "This is a Default Toast (White)");
         AwesomeToast.defaultBlack(getApplicationContext(), "This is a Default Toast (Black)");
         AwesomeToast.defaultBlackPeak(getApplicationContext(), "This is a Default Toast (Black)");
@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
         AwesomeToast.error(getApplicationContext(), "This is an Error Message");
         AwesomeToast.errorPeak(getApplicationContext(), "This is an Error Message (Peak)");
         AwesomeToast.errorGradient(getApplicationContext(),"This is an Error Message (Gradient)");
-        AwesomeToast.errorGradientPeak(getApplicationContext(),"This is an Error Message (Both)");
+        AwesomeToast.errorGradientPeak(getApplicationContext(),"This is an Error Message (Both)");*/
 
         // Info
         AwesomeToast.info(getApplicationContext(), "This is an Info Message");
@@ -49,16 +49,19 @@ public class MainActivity extends AppCompatActivity {
         AwesomeToast.infoGradientPeak(getApplicationContext(), "This is an Info Message (Both)");
 
         // Warning
-        AwesomeToast.warning(getApplicationContext(), "This is a Warning Message");
+        /*AwesomeToast.warning(getApplicationContext(), "This is a Warning Message");
         AwesomeToast.warningPeak(getApplicationContext(), "This is a Warning Message (Peak)");
         AwesomeToast.warningGradient(getApplicationContext(),"This is a Warning Message (Gradient)");
-        AwesomeToast.warningGradientPeak(getApplicationContext(), "This is a Warning Message (Both)");
+        AwesomeToast.warningGradientPeak(getApplicationContext(), "This is a Warning Message (Both)");*/
 
         // Custom Toast
-        new AwesomeToast.Create(this, "This is a Custom Toast")
-                .setImageValue(R.drawable.ic_happy)
+        new AwesomeToast.Create(this, " Awesome Toast! ")
+                .setImageValue(R.drawable.ic_clock_logo)
                 .setIsGradient(true)
-                .setToastGravity(Gravity.CENTER)
+                .setTextBold(true)
+                .setAllRadius(25)
+                .setTextSize(Constants.TEXT_BIG_SIZE)
+                .setToastGravity(Gravity.BOTTOM)
                 .show();
 
     }

@@ -39,6 +39,7 @@ public class AwesomeToast {
         // Set some TextView values (text, color, size, style)
         textView.setText(create.text);
         textView.setTextColor(create.textColor);
+        create.textSize = 28;
         textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, create.textSize);
         if (create.textBold) textView.setTypeface(null, Typeface.BOLD);
         else textView.setTypeface(null, Typeface.NORMAL);
