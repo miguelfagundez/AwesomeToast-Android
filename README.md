@@ -51,9 +51,9 @@ new AwesomeToast.Create(this, " Awesome Toast! ") // Create a new AwesomeToast, 
         .setIsGradient(true)			  // Linear gradient (Top to Bottom) available
         .setTextBold(true)			  // Bold style available
         .setAllRadius(25)			  // Corner radius (recommended between 25 to 75)
-        .setTextSize(Constants.TEXT_BIG_SIZE)	  // Text Size (options available SMALL, NORMAL, BIG, or DEFAULT)
-        .setToastGravity(Constants.TOAST_CENTER_POSITION)  // Toast Gravity (BOTTOM, CENTER, or TOP)
-        .show();				           // ALWAYS include .show method at the end.
+        .setTextSize(AwesomeToast.TEXT_BIG_SIZE)	      // Text Size (options available SMALL, NORMAL, BIG, or DEFAULT)
+        .setToastGravity(AwesomeToast.TOAST_CENTER_POSITION)  // Toast Gravity (BOTTOM, CENTER, or TOP)
+        .show();				              // ALWAYS include .show method at the end.
 ```
 
 **Toast Messages Available into the Library**
@@ -161,9 +161,9 @@ The library manages only 4 different text sizes: 12sp, 16sp, 20sp, and 24sp.
 
 |Const name|Value|Description|
 |---|---|---|
-|Constants.TEXT_SMALL_SIZE|12sp|Optional|
-|Constants.TEXT_NORMAL_SIZE|16sp|Default value|
-|Constants.TEXT_BIG_SIZE|24sp|Optional|
+|AwesomeToast.TEXT_SMALL_SIZE|12sp|Optional|
+|AwesomeToast.TEXT_NORMAL_SIZE|16sp|Default value|
+|AwesomeToast.TEXT_BIG_SIZE|24sp|Optional|
 |No name|20sp|If you include any other different value|
 
 If you want to change the text size you can apply the custom toast as follow:
@@ -172,7 +172,7 @@ If you want to change the text size you can apply the custom toast as follow:
 // Custom Toast
 new AwesomeToast.Create(this, " Text Size is Big! ") // Create a new AwesomeToast, you need context and message
 	...
-	.setTextSize(Constants.TEXT_BIG_SIZE)	     // Changing the text size to 24sp (BIG)
+	.setTextSize(AwesomeToast.TEXT_BIG_SIZE)     // Changing the text size to 24sp (BIG)
         ...
         .show();				     // ALWAYS include .show method at the end.
 ```
@@ -229,18 +229,18 @@ By default, toast is presented at the Bottom of the screen. However, you can mod
 // Custom Toast
 new AwesomeToast.Create(this, " Toast all corners! ") // Create a new AwesomeToast, you need context and message
 	...
-	.setToastGravity(Constants.TOAST_CENTER_POSITION)   // Set toast at the CENTER of the screen 
-	...						    // (BOTTOM, CENTER, and TOP are available)
-        .show();					    // ALWAYS include .show method at the end.
+	.setToastGravity(AwesomeToast.TOAST_CENTER_POSITION) // Set toast at the CENTER of the screen 
+	...						     // (BOTTOM, CENTER, and TOP are available)
+        .show();					     // ALWAYS include .show method at the end.
 ```
 
 Options available:
 
 |Const name|Description|
 |---|---|
-|Constants.TOAST_TOP_POSITION|Optional|
-|Constants.TOAST_CENTER_POSITION|Optional|
-|Constants.TOAST_BOTTOM_POSITION|Default value|
+|AwesomeToast.TOAST_TOP_POSITION|Optional|
+|AwesomeToast.TOAST_CENTER_POSITION|Optional|
+|AwesomeToast.TOAST_BOTTOM_POSITION|Default value|
 
 Toast shape
 -----
