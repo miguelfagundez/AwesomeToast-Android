@@ -1,4 +1,4 @@
-# AwesomeToast-Android 
+# AwesomeToast Android Library
 <img src="images/05.png" width="200"/>
 
 Simple library for managing awesome custom toast in Android SDK
@@ -76,13 +76,13 @@ Success, error, and warning follow the same patterns. For example, Success:
 
 For defaults are only available normal and peak options. For example:
 
-Default White: `AwesomeToast.defaultWhite(this, " This is an Info Message ");`
+Default White: `AwesomeToast.defaultWhite(this, " This is a Message ");`
 
-Default White Peak: `AwesomeToast.defaultWhitePeak(this, " This is an Info Message ");`
+Default White Peak: `AwesomeToast.defaultWhitePeak(this, " This is a Message ");`
 
-Default Black: `AwesomeToast.defaultBlack(this, " This is an Info Message ");`
+Default Black: `AwesomeToast.defaultBlack(this, " This is a Message ");`
 
-Default Black Peak: `AwesomeToast.defaultBlackPeak(this, " This is an Info Message ");`
+Default Black Peak: `AwesomeToast.defaultBlackPeak(this, " This is a Message ");`
 
 
 Attributes
@@ -107,6 +107,140 @@ Attributes
 |radiusBottomLeft|int|0|Bottom left corner|
 |radiusTopRight|int|0|Top right corner|
 |radiusBottomRight|int|0|Bottom right corner|
+
+Colors
+-----
+
+The library has two main toast color options: plain and gradient. By default, gradient option is not available. If you want to use the gradient option then you **MUST** include these three methods in your custom toast:
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Gradient actived! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setIsGradient(true)			     // Taking gradient option as default
+        .setGradientColorStart( YOUR INITIAL COLOR ) // Set your initial color here 
+        .setGradientColorEnd( YOUR END COLOR )	     // Set your end color here
+        ...
+        .show();				     // ALWAYS include .show method at the end.
+```
+
+You can define your own colors into `res/values/colors.xml` folder. Then you can apply them using `this.getResources().getColor(R.color.YOUR_COLOR_NAME)`. These same principles apply for Background Color, Border Color, and Text Color. By default, the colors used into the library are:
+
+|Color name|Hexa value|Used|
+|---|---|---|
+|Black|#000000|Background and Text|
+|Grey|#7E7E7E|Background and Text|
+|White|#FFFFFF|Background and Text|
+|Green Light|#17BF0B|Success background plain/gradient|
+|Green Dark|#0F8A07|Success border and gradient|
+|Red|#E80E0E|Error background plain/gradient|
+|Red Dark|#B60D0D|Error border and gradient|
+|Blue Light|#0E45E8|Info background plain/gradient|
+|Blue Dark|#0C38BA|Info border and gradient|
+|Orange Light|#E89F0E|Warning background plain/gradient|
+|Orange Dark|#BC810C|Warning border and gradient|
+
+If you want to include your own colors (gradient, plain, background, border, or any other color options), then you need to do as follow:
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Your colors! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setIsGradient(true)			                                      // Taking gradient option as default
+        .setGradientColorStart(this.getResources().getColor(R.color.YOUR_COLOR_NAME)) // Set your initial color here 
+        .setGradientColorEnd(this.getResources().getColor(R.color.YOUR_COLOR_NAME))   // Set your end color here
+        ...
+        .show();				     // ALWAYS include .show method at the end.
+```
+
+Text Size
+-----
+
+The library manages only 4 different text sizes: 12sp, 16sp, 20sp, and 24sp.
+
+|Const name|Value|Description|
+|---|---|---|
+|Constants.TEXT_SMALL_SIZE|12sp|Optional|
+|Constants.TEXT_NORMAL_SIZE|16sp|Default value|
+|Constants.TEXT_BIG_SIZE|24sp|Optional|
+|No name|20sp|If you include any other different value|
+
+If you want to change the text size you can apply the custom toast as follow:
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Text Size is Big! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setTextSize(Constants.TEXT_BIG_SIZE)	     // Changing the text size to 24sp (BIG)
+        ...
+        .show();				     // ALWAYS include .show method at the end.
+```
+
+Images
+-----
+
+The library manages only one image per toast in the left side. This is optional, so you can include it if neccessary. I recommend to use a vector asset which size is between 24dp and 48dp. By default, the toast available in the library use an image size of 24dp. If you want to include an image, then you must use the `.setImageValue()` method as follow:
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Toast with image! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setImageValue(R.drawable.YOUR_IMAGE_NAME)   // Show an image in the toast (Optional)
+        ...
+        .show();				     // ALWAYS include .show method at the end.
+```
+
+
+Toast corners
+-----
+
+You can create a toast with different round corners radius. You can modify each corner independently or all in one method, see example for details:
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Toast all corners! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setAllRadius(75)   	// Set all corners a radius of 75 each
+        ...
+        .show();		// ALWAYS include .show method at the end.
+```
+
+or you can change each corner separately. You can include all corners or only few of them because by default each corner has 0 as initial value. 
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Toast each corner! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setRadiusTopLeft(75)   	// Set Top Left corner a value of 75
+	.setRadiusTopRight(50)   	// Set Top Right corner a value of 50
+	.setRadiusBottomLeft(25)   	// Set Bottom Left corner a value of 25
+	.setRadiusBottomRight(75)   	// Set Bottom Right corner a value of 75
+        ...
+        .show();		// ALWAYS include .show method at the end.
+```
+
+Toast position
+-----
+
+By default, toast is presented at the Bottom of the screen. However, you can modify this position using `.setToastGravity()` method as follow:
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Toast all corners! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setToastGravity(Constants.TOAST_CENTER_POSITION)   // Set toast at the CENTER of the screen 
+	...						    // (BOTTOM, CENTER, and TOP are available)
+        .show();					    // ALWAYS include .show method at the end.
+```
+
+Options available:
+
+|Const name|Description|
+|---|---|
+|Constants.TOAST_TOP_POSITION|Optional|
+|Constants.TOAST_CENTER_POSITION|Optional|
+|Constants.TOAST_BOTTOM_POSITION|Default value|
+
 
 Author
 -----
