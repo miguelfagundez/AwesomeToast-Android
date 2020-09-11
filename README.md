@@ -3,8 +3,12 @@
 
 Simple library for managing awesome custom toast in Android SDK
 
+[![](https://jitpack.io/v/miguelfagundez/AwesomeToast-Android.svg)](https://jitpack.io/#miguelfagundez/AwesomeToast-Android) 
+[![](https://img.shields.io/badge/Language%20-Java-4682b4.svg)](https://jitpack.io/#miguelfagundez/AwesomeToast-Android)
+[![](https://img.shields.io/apm/l/vim-mode.svg?maxAge=2592000)](https://jitpack.io/#miguelfagundez/AwesomeToast-Android)
+[![](https://img.shields.io/badge/API-%2B%2016-lightgrey.svg)](https://jitpack.io/#miguelfagundez/AwesomeToast-Android)
+[![](https://img.shields.io/badge/AndroidStudio-4.0.1-green.svg)](https://jitpack.io/#miguelfagundez/AwesomeToast-Android)
 
-**Status:** Document in progress..
 
 ## Abstract
     Awesome Toast is a simple and easy to use Toast library for Android. 
@@ -30,7 +34,7 @@ allprojects {
  
 ```gradle
 dependencies {
-	implementation 'com.github.miguelfagundez:AwesomeToast-Android:1.0.1'
+	implementation 'com.github.miguelfagundez:AwesomeToast-Android:1.0.2'
 }
 ```
 
