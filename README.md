@@ -94,11 +94,12 @@ Attributes
 |textColor|int|White|Text color|
 |textSize|int|TEXT_NORMAL_SIZE = 16sp| Text Size|
 |textBold|boolean|false|Text bold available|
+|shape|int|RECTANGLE|Toast shape is a rectangle|
 |imageValue|int|0|Image in Toast (optional)|
 |backgroundColor|int|Grey|Background color in Toast (plain option only)|
 |borderColor|int|Black|Border color in Toast (plain or gradient option)|
 |borderWidth|int|8|Border size in Toast|
-|toastGravity|int|Gravity.BOTTOM|Toast position in Screen (TOP and CENTER available)|
+|toastGravity|int|TOAST_BOTTOM_POSITION|Toast position in Screen (TOP and CENTER available)|
 |toastLength|int|Toast.LENGTH_SHORT|Toast duration (LENGHT_LONG available)|
 |isGradient|boolean|false|Background color in gradient mode|
 |gradientColorStart|int|Black|Start gradient color (Top) / isGradiente MUST be TRUE|
@@ -240,6 +241,22 @@ Options available:
 |Constants.TOAST_TOP_POSITION|Optional|
 |Constants.TOAST_CENTER_POSITION|Optional|
 |Constants.TOAST_BOTTOM_POSITION|Default value|
+
+Toast shape
+-----
+
+The library uses the RECTANGLE as shape by default. However, you can modify this shape using toast corners above or even using the `.setShape()` method as follow:
+
+```java
+// Custom Toast
+new AwesomeToast.Create(this, " Toast all corners! ") // Create a new AwesomeToast, you need context and message
+	...
+	.setShape(GradientDrawable.OVAL)   	// Set a new shape (OVAL) 
+	...					  
+        .show();				// ALWAYS include .show method at the end.
+```
+
+However, the library does not manage any other shape. If you want to change the shape need to use GradientDrawable options as showed above. 
 
 
 Author
