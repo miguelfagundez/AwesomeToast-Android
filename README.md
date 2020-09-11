@@ -12,7 +12,7 @@ Simple library for managing awesome custom toast in Android SDK
     create your own Toast message using the methods describe below. 
     You can use it to enhance the user experience and save developing time. Cheers!
 
-### Setup
+Setup
 -----
 
 **Gradle** 
@@ -34,7 +34,7 @@ dependencies {
 }
 ```
 
-### Usage
+Usage
 -----
 
 **MainActivity.java** 
@@ -47,7 +47,7 @@ AwesomeToast.infoGradient(this, " Awesome Toast! "); // Just one line
 ```java
 // Custom Toast
 new AwesomeToast.Create(this, " Awesome Toast! ") // Create a new AwesomeToast, you need context and message
-        .setImageValue(R.drawable.ic_clock_logo)  // You can ( or cannot include an image)
+        .setImageValue(R.drawable.ic_clock_logo)  // You can (or cannot include an image)
         .setIsGradient(true)			  // Linear gradient (Top to Bottom) available
         .setTextBold(true)			  // Bold style available
         .setAllRadius(25)			  // Corner radius (recommended between 25 to 75)
@@ -67,14 +67,55 @@ The library has some common Toast available just in one line. Each type has four
 `AwesomeToast.infoGradient(this, " This is an Info Message (Gradient) ");` | <img src="images/03.png" width="200"></img>  |
 `AwesomeToast.infoGradientPeak(this, " This is an Info Message (Both) ");` | <img src="images/04.png" width="200"></img>  |
 
+Success, error, and warning follow the same patterns. For example, Success:
 
-Setup
+     AwesomeToast.success(this, " This is an Success Message ");
+     AwesomeToast.successPeak(this, " This is an Success Message (Peak) ");
+     AwesomeToast.successGradient(this, " This is an Success Message (Gradient) ");
+     AwesomeToast.successGradientPeak(this, " This is an Success Message (Both) ");
+
+For defaults are only available normal and peak options. For example:
+
+Default White: `AwesomeToast.defaultWhite(this, " This is an Info Message ");`
+
+Default White Peak: `AwesomeToast.defaultWhitePeak(this, " This is an Info Message ");`
+
+Default Black: `AwesomeToast.defaultBlack(this, " This is an Info Message ");`
+
+Default Black Peak: `AwesomeToast.defaultBlackPeak(this, " This is an Info Message ");`
+
+
+Author
 -----
 
+**Miguel Fagundez** - [Miguel's website](https://miguelfagundez.weebly.com/)
+
 ## License
-The work done has been licensed under MIT License 2.0. The license file can be found
+The work done has been licensed under MIT License. This means that you can use this library and its code without any restriction. The license file can be found
 [here](LICENSE). You can find out more about the license at:
 
 https://opensource.org/licenses/MIT
 
-**Status:** Document in progress..
+```
+MIT License
+
+Copyright (c) 2020 Miguel Fagundez
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+```
