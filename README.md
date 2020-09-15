@@ -62,7 +62,7 @@ new AwesomeToast.Create(this, " Awesome Toast! ") // Create a new AwesomeToast, 
 
 **Toast Messages Available into the Library**
 
-The library has some common Toast available just in one line. Each type has four options (Normal, Peak, Gradient, and PeakGradient). The table below shows a complete example with its pictures.
+The library has some common Toast available just in one line (Success, Info, Warning, and Error). Each type has four options (Normal, Peak, Gradient, and PeakGradient). The table below shows a complete example with its pictures.
 
 | Toast Name | Picture |
 | ------------- | ------------- |
