@@ -25,6 +25,7 @@ public class AwesomeToast {
     public static final int TOAST_SHORT_DURATION = 2;
 
     // Text Size
+    public static final int TEXT_EXTRA_SMALL_SIZE = 9;
     public static final int TEXT_SMALL_SIZE = 3;
     public static final int TEXT_NORMAL_SIZE = 4;
     public static final int TEXT_BIG_SIZE = 5;
@@ -94,7 +95,7 @@ public class AwesomeToast {
         Toast toast = new Toast(create.context);
         toast.setView(layout);
         toast.setDuration(create.toastLength);
-        toast.setGravity(create.toastGravity, 0, 100);
+        toast.setGravity(create.toastPosition, 0, 100);
         toast.show();
     }
 
@@ -370,7 +371,7 @@ public class AwesomeToast {
         private int shape;
         private int borderWidth;
 
-        private int toastGravity;
+        private int toastPosition;
         private int toastLength;
 
         private boolean isGradient;
@@ -416,7 +417,7 @@ public class AwesomeToast {
             borderWidth = 8;
 
             // Toast values
-            toastGravity = Gravity.BOTTOM;
+            toastPosition = Gravity.BOTTOM;
             toastLength = Toast.LENGTH_SHORT;
 
         }
@@ -465,6 +466,9 @@ public class AwesomeToast {
 
         public Create setTextSize(int textSize) {
             switch (textSize){
+                case TEXT_EXTRA_SMALL_SIZE:
+                    this.textSize = 8;
+                    break;
                 case TEXT_SMALL_SIZE:
                     this.textSize = 12;
                     break;
@@ -491,16 +495,16 @@ public class AwesomeToast {
             return this;
         }
 
-        public Create setToastGravity(int toastGravity) {
+        public Create setToastPosition(int toastGravity) {
             switch (toastGravity){
                 case TOAST_CENTER_POSITION:
-                    this.toastGravity = Gravity.CENTER;
+                    this.toastPosition = Gravity.CENTER;
                     break;
                 case TOAST_TOP_POSITION:
-                    this.toastGravity = Gravity.TOP;
+                    this.toastPosition = Gravity.TOP;
                     break;
                 default:
-                    this.toastGravity = Gravity.BOTTOM;
+                    this.toastPosition = Gravity.BOTTOM;
                     break;
             }
             return this;

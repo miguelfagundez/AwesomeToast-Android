@@ -64,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
                 .setAllRadius(25)
                 .setShape(GradientDrawable.OVAL)
                 .setTextSize(AwesomeToast.TEXT_BIG_SIZE)
-                .setToastGravity(AwesomeToast.TOAST_BOTTOM_POSITION)
+                .setToastPosition(AwesomeToast.TOAST_BOTTOM_POSITION)
                 .show();
 
     }
