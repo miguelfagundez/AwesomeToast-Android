@@ -43,10 +43,10 @@ public class MainActivity extends AppCompatActivity {
         AwesomeToast.errorGradientPeak(getApplicationContext(),"This is an Error Message (Both)");*/
 
         // Info
-        /*AwesomeToast.info(getApplicationContext(), "This is an Info Message");
-        AwesomeToast.infoPeak(getApplicationContext(), "This is an Info Message (Peak)");
-        AwesomeToast.infoGradient(getApplicationContext(),"This is an Info Message (Gradient)");
-        AwesomeToast.infoGradientPeak(getApplicationContext(), "This is an Info Message (Both)");*/
+        AwesomeToast.info(getApplicationContext(), "This is an Info Message");
+        AwesomeToast.infoPeak(getApplicationContext(), "This is an Info Message");
+        AwesomeToast.infoGradient(getApplicationContext(),"This is an Info Message");
+        AwesomeToast.infoGradientPeak(getApplicationContext(), "This is an Info Message");
 
         // Warning
         /*AwesomeToast.warning(getApplicationContext(), "This is a Warning Message");
@@ -55,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         AwesomeToast.warningGradientPeak(getApplicationContext(), "This is a Warning Message (Both)");*/
 
         // Custom Toast
-        new AwesomeToast.Create(this, " Awesome Toast! ")
+        /*new AwesomeToast.Create(this, " Awesome Toast! ")
                 .setImageValue(R.drawable.ic_clock_logo)
                 .setIsGradient(true)
                 .setGradientColorStart(this.getResources().getColor(R.color.yellow))
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
                 .setShape(GradientDrawable.OVAL)
                 .setTextSize(AwesomeToast.TEXT_BIG_SIZE)
                 .setToastPosition(AwesomeToast.TOAST_BOTTOM_POSITION)
-                .show();
+                .show();*/
 
     }
 }
