@@ -71,6 +71,21 @@ The library has some common Toast available just in one line. Each type has four
 `AwesomeToast.infoGradient(this, " This is an Info Message (Gradient) ");` | <img src="images/03.png" width="200"></img>  |
 `AwesomeToast.infoGradientPeak(this, " This is an Info Message (Both) ");` | <img src="images/04.png" width="200"></img>  |
 
+For example, the internal code needed to generate the infoGradient Toast is (you need to include your own image and you can change text size, colors, etc):
+
+```java
+// Info Gradient Toast
+new Create(context, text)
+        .setIsGradient(true)
+        .setGradientColorStart(context.getResources().getColor(R.color.colorBlueDark))
+        .setGradientColorEnd(context.getResources().getColor(R.color.colorBlue))
+        .setBorderColor(context.getResources().getColor(R.color.colorBlueDark))
+        .setImageValue(R.drawable.ic_info)
+        .setTextSize(TEXT_NORMAL_SIZE)
+        .setAllRadius(100)
+        .show();
+```
+
 Success, error, and warning follow the same patterns. For example, Success:
 
      AwesomeToast.success(this, " This is an Success Message ");
