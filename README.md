@@ -34,7 +34,7 @@ allprojects {
  
 ```gradle
 dependencies {
-	implementation 'com.github.miguelfagundez:AwesomeToast-Android:1.0.2'
+	implementation 'com.github.miguelfagundez:AwesomeToast-Android:1.0.3'
 }
 ```
 
@@ -56,7 +56,7 @@ new AwesomeToast.Create(this, " Awesome Toast! ") // Create a new AwesomeToast, 
         .setTextBold(true)			  // Bold style available
         .setAllRadius(25)			  // Corner radius (recommended between 25 to 75)
         .setTextSize(AwesomeToast.TEXT_BIG_SIZE)	      // Text Size (options available SMALL, NORMAL, BIG, or DEFAULT)
-        .setToastGravity(AwesomeToast.TOAST_CENTER_POSITION)  // Toast Gravity (BOTTOM, CENTER, or TOP)
+        .setToastPosition(AwesomeToast.TOAST_CENTER_POSITION)  // Toast Position (BOTTOM, CENTER, or TOP)
         .show();				              // ALWAYS include .show method at the end.
 ```
 
@@ -103,7 +103,7 @@ Attributes
 |backgroundColor|int|Grey|Background color in Toast (plain option only)|
 |borderColor|int|Black|Border color in Toast (plain or gradient option)|
 |borderWidth|int|8|Border size in Toast|
-|toastGravity|int|TOAST_BOTTOM_POSITION|Toast position in Screen (TOP and CENTER available)|
+|toastPosition|int|TOAST_BOTTOM_POSITION|Toast position in Screen (TOP and CENTER available)|
 |toastLength|int|Toast.LENGTH_SHORT|Toast duration (LENGHT_LONG available)|
 |isGradient|boolean|false|Background color in gradient mode|
 |gradientColorStart|int|Black|Start gradient color (Top) / isGradiente MUST be TRUE|
@@ -165,6 +165,7 @@ The library manages only 4 different text sizes: 12sp, 16sp, 20sp, and 24sp.
 
 |Const name|Value|Description|
 |---|---|---|
+|AwesomeToast.TEXT_EXTRA_SMALL_SIZE|8sp|Optional|
 |AwesomeToast.TEXT_SMALL_SIZE|12sp|Optional|
 |AwesomeToast.TEXT_NORMAL_SIZE|16sp|Default value|
 |AwesomeToast.TEXT_BIG_SIZE|24sp|Optional|
@@ -227,13 +228,13 @@ new AwesomeToast.Create(this, " Toast each corner! ") // Create a new AwesomeToa
 Toast position
 -----
 
-By default, toast is presented at the Bottom of the screen. However, you can modify this position using `.setToastGravity()` method as follow:
+By default, toast is presented at the Bottom of the screen. However, you can modify this position using `.setToastPosition()` method as follow:
 
 ```java
 // Custom Toast
 new AwesomeToast.Create(this, " Toast all corners! ") // Create a new AwesomeToast, you need context and message
 	...
-	.setToastGravity(AwesomeToast.TOAST_CENTER_POSITION) // Set toast at the CENTER of the screen 
+	.setToastPosition(AwesomeToast.TOAST_CENTER_POSITION) // Set toast at the CENTER of the screen 
 	...						     // (BOTTOM, CENTER, and TOP are available)
         .show();					     // ALWAYS include .show method at the end.
 ```
