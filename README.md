@@ -131,7 +131,7 @@ Attributes
 Colors
 -----
 
-The library has two main toast color options: plain and gradient. By default, gradient option is not available. If you want to use the gradient option then you **MUST** include these three methods in your custom toast:
+The library has two main toast color options: plain and gradient. By default, gradient option is not available. If you want to use the gradient option then you **MUST** include `.setIsGradient(true)` method in your custom toast:
 
 ```java
 // Custom Toast
@@ -176,7 +176,7 @@ new AwesomeToast.Create(this, " Your colors! ") // Create a new AwesomeToast, yo
 Text Size
 -----
 
-The library manages only 4 different text sizes: 12sp, 16sp, 20sp, and 24sp.
+The library manages 5 different text sizes: 8sp, 12sp, 16sp, 20sp, and 24sp.
 
 |Const name|Value|Description|
 |---|---|---|
@@ -200,7 +200,7 @@ new AwesomeToast.Create(this, " Text Size is Big! ") // Create a new AwesomeToas
 Images
 -----
 
-The library manages only one image per toast in the left side. This is optional, so you can include it if neccessary. I recommend to use a vector asset which size is between 24dp and 48dp. By default, the toast available in the library use an image size of 24dp. If you want to include an image, then you must use the `.setImageValue()` method as follow:
+The library manages only one image per toast in the left side. This is optional, so you can include it if neccessary. I recommend to use a vector asset which size is between 24dp to 48dp. By default, the toast available in the library use an image size of 24dp. If you want to include an image, then you must use the `.setImageValue()` method as follow:
 
 ```java
 // Custom Toast
