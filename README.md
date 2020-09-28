@@ -55,7 +55,7 @@ new AwesomeToast.Create(this, " Awesome Toast! ") // Create a new AwesomeToast, 
         .setIsGradient(true)			  // Linear gradient (Top to Bottom) available
         .setTextBold(true)			  // Bold style available
         .setAllRadius(25)			  // Corner radius (recommended between 25 to 75)
-        .setTextSize(AwesomeToast.TEXT_BIG_SIZE)	      // Text Size (options available SMALL, NORMAL, BIG, or DEFAULT)
+        .setTextSize(AwesomeToast.TEXT_BIG_SIZE)	      // Text Size (options available EXTRA_SMALL, SMALL, NORMAL, BIG, or DEFAULT)
         .setToastPosition(AwesomeToast.TOAST_CENTER_POSITION)  // Toast Position (BOTTOM, CENTER, or TOP)
         .show();				              // ALWAYS include .show method at the end.
 ```
