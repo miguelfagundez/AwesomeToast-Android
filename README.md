@@ -138,8 +138,8 @@ The library has two main toast color options: plain and gradient. By default, gr
 new AwesomeToast.Create(this, " Gradient actived! ") // Create a new AwesomeToast, you need context and message
 	...
 	.setIsGradient(true)			     // Taking gradient option as default
-        .setGradientColorStart( YOUR INITIAL COLOR ) // Set your initial color here 
-        .setGradientColorEnd( YOUR END COLOR )	     // Set your end color here
+        .setGradientColorStart( YOUR INITIAL COLOR ) // Set your initial color here (Optional)
+        .setGradientColorEnd( YOUR END COLOR )	     // Set your end color here (Optional)
         ...
         .show();				     // ALWAYS include .show method at the end.
 ```
@@ -184,7 +184,7 @@ The library manages 5 different text sizes: 8sp, 12sp, 16sp, 20sp, and 24sp.
 |AwesomeToast.TEXT_SMALL_SIZE|12sp|Optional|
 |AwesomeToast.TEXT_NORMAL_SIZE|16sp|Default value|
 |AwesomeToast.TEXT_BIG_SIZE|24sp|Optional|
-|No name|20sp|If you include any other different value|
+|Another size|20sp|If you include another String value|
 
 If you want to change the text size you can apply the custom toast as follow:
 
