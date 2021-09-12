@@ -282,7 +282,7 @@ However, the library does not manage any other shape. If you want to change the 
 Author
 -----
 
-**Miguel Fagundez** - [Miguel's website](https://miguelfagundez.weebly.com/)
+**Miguel Fagundez** - [Miguel's website](https://miguelfagundez.com/)
 
 ## License
 The work done has been licensed under MIT License. This means that you can use this library and its code without any restriction. The license file can be found
